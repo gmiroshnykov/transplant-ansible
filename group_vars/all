@@ -1,0 +1,18 @@
+users:
+  - name: gmiroshnykov
+    groups: [admin]
+    keys:
+      - |
+        ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDMD5DWPoEPG8UuXLsm1bNTz2gUz7rxPO/GuvcRjoNLPbNDqmygMlRbjm9BV8/IFAHvPCidLYkCTwDT20jvYcxf7RZMp3qw9mODpqvYZPAvW1hvv0NHbie5S2FCDFzt//QRvIdn0nEmITe9J4gdaROC/mUpwetJFsjpvh6wHsyF+T6X1HC1uXwlQ87p5a0eZ5gH055k5gggqqgYfGVipAT58OrKIE94G7Ow7avRK9VW01xpahig8giC0zL1SzeSWemmItkTGmXkda4jXhDPqJ/GrKOqDyI+UgYMsEiJw+aQmBvOptO+HOd0wgPVTGaDWX9MhCLsbADRnLqIyp6pMo6f
+
+  - name: catlee
+    groups: [admin]
+    keys:
+      - |
+        ssh-dss AAAAB3NzaC1kc3MAAACBAMwVSpIUT8pAdFF/tKsGED//1oLJruGIhhUyMTLw7f5OTZb6GKQIY6D3RrnJJjaqwFqTIk1V1V92i0FSDUx/FZLY8Thjw3Q4oV+jcL4oi9V2JwFFsBZcAGHIGxU0oMXPoZYtikRo+955HgwCGvIdHdMx2cOSy6wDlecSzYF7xnFRAAAAFQD00WmYN7H+Le9rAnrLf3+Y9vbAdQAAAIAvE4xkVSC2bqOfnuGvH8pyQfBZtkO/d59/rT92VcHwID5axsuSoIFqJZiuic+pyvtiBtPPjEqmBlHiPydan3bjbNeO+lnWP4ZRFpzuk8UY70nAXVD02gZcbAIAcdfmZPk4GqBb++9Ht5AMvXIFsp4PqS3Ejfcs6Nc8yUaqCrWtSwAAAIAaOIdG/vJ/N/wli2632gwpokr2hcW7lTCcq3saV1jib+4LAy1y7J0IyLDcZyrijGhJolbPe8dTiaNCPZV0YjhHU/tn7AiRPFlG4RVkkS3mRWhkuyWqj5NBN/rxBCrwWO7/SaAL+02i7IFqtBbw2WiA0896MmbvODvNttwK0Oh+0w==
+
+  - name: ryan
+    groups: [admin]
+    keys:
+      - |
+        ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEAtCBS945wWvvw0AyU+Gc2hHnbO6yQdmzbgMdUUyXVX2zUHE5MaBtg+zCKQFYeP2Akjiui00KUGczS2ARcCr3mZPpExZedZNbZbI1PkejaI6AoQHi/+fZRi4ovbjecui/zh83zcnjCibCgSxEzBrR+pIXMXAF3Knb7Yw17NorAJ8M=

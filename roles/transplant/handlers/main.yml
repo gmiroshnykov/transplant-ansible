@@ -1,0 +1,3 @@
+- name: restart transplant
+  sudo: true
+  service: name=transplant state=restarted

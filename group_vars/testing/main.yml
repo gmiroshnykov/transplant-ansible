@@ -1,0 +1,22 @@
+transplant:
+  config:
+    repositories:
+      - name: mozilla-central
+        path: https://hg.mozilla.org/mozilla-central/
+      - name: mozilla-aurora
+        path: https://hg.mozilla.org/releases/mozilla-aurora/
+      - name: mozilla-beta
+        path: https://hg.mozilla.org/releases/mozilla-beta/
+      - name: mozilla-b2g32_v2_0
+        path: https://hg.mozilla.org/releases/mozilla-b2g32_v2_0/
+      - name: mozilla-esr31
+        path: https://hg.mozilla.org/releases/mozilla-esr31/
+      - name: mozilla-aurora-test
+        path: /var/hg/mozilla-aurora-test
+
+testing_repositories:
+  enabled: true
+  repositories:
+    - name: mozilla-aurora-test
+      path: /var/hg/mozilla-aurora-test
+      from: https://hg.mozilla.org/releases/mozilla-aurora/

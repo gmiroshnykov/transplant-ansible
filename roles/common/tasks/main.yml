@@ -1,0 +1,17 @@
+- name: apt-get update
+  sudo: true
+  apt: update_cache=true cache_valid_time=3600
+
+- name: install packages
+  sudo: true
+  apt: pkg={{ item }}
+  with_items:
+    - build-essential
+    - vim
+    - htop
+    - screen
+    - curl
+    - python-dev
+    - python-pycurl # for ansible
+    - python-pip # for ansible
+    - python-apt # for ansible

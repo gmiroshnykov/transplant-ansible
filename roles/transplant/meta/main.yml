@@ -1,0 +1,4 @@
+dependencies:
+  - laggyluke.nginx
+  - laggyluke.git
+  - laggyluke.mercurial

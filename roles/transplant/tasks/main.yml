@@ -1,0 +1,88 @@
+- name: create project user and group
+  sudo: true
+  user: >
+    name={{ transplant.user }}
+    group={{ transplant.group }}
+    shell=/bin/bash
+
+- name: create project directory
+  sudo: true
+  file: >
+    path={{ transplant.dir }}
+    state=directory
+    owner={{ ansible_user_id }}
+    mode=0755
+
+- name: create data directory
+  sudo: true
+  file: >
+    path={{ transplant.data_dir }}
+    state=directory
+    owner={{ transplant.user }}
+    group={{ transplant.group }}
+    mode=0755
+
+- name: install virtualenv and passlib
+  sudo: true
+  pip: name={{ item }}
+  with_items:
+    - virtualenv
+    - passlib
+
+- name: clone app
+  git: >
+    repo={{ transplant.repository }}
+    version={{ transplant.version }}
+    dest={{ transplant.dir }}/app
+  notify: restart transplant
+
+- name: pip install
+  pip: >
+    requirements={{ transplant.dir }}/app/requirements.txt
+    virtualenv={{ transplant.dir }}/env
+  notify: restart transplant
+
+- name: generate config.py
+  template: >
+    src=config.py.j2
+    dest={{ transplant.dir }}/app/config.py
+    mode=0644
+  notify: restart transplant
+
+- name: generate uwsgi.ini
+  sudo: true
+  template: >
+    src=uwsgi.ini.j2
+    dest={{ transplant.dir }}/uwsgi.ini
+    owner=root
+    group=root
+    mode=0644
+  notify: restart transplant
+
+- name: generate upstart script
+  sudo: true
+  template: >
+    src=upstart.conf.j2
+    dest=/etc/init/transplant.conf
+    owner=root
+    group=root
+    mode=0644
+  notify: restart transplant
+
+- name: generate htpasswd
+  sudo: true
+  htpasswd: >
+    name={{ transplant.http_username }}
+    password={{ transplant.http_password }}
+    path=/etc/nginx/transplant.htpasswd
+  when: transplant.http_username and transplant.http_password
+
+- name: generate nginx vhost
+  sudo: true
+  template: >
+    src=nginx-vhost.conf.j2
+    dest=/etc/nginx/sites-enabled/transplant
+    owner=root
+    group=root
+    mode=0644
+  notify: reload nginx

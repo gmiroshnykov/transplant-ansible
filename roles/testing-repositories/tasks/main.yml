@@ -1,0 +1,17 @@
+- name: create parent directories for repositories
+  sudo: true
+  file: >
+    path={{ item.path | dirname }}
+    state=directory
+    owner={{ testing_repositories.user }}
+    group={{ testing_repositories.group }}
+    mode=0775
+  with_items: testing_repositories.repositories
+
+- name: clone / pull testing repositories
+  sudo: true
+  sudo_user: '{{ testing_repositories.user }}'
+  hg: >
+    repo={{ item.from }}
+    dest={{ item.path }}
+  with_items: testing_repositories.repositories

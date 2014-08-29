@@ -1,0 +1,4 @@
+{# HACK: to_nice_json is used to produce Python list of dicts #}
+REPOSITORIES = {{ transplant.config.repositories | to_nice_json }}
+
+WORKDIR = '{{ transplant.data_dir }}'

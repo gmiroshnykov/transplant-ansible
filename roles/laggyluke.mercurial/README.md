@@ -1,0 +1,4 @@
+mercurial
+=========
+
+Installs Mercurial client.

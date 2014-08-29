@@ -1,0 +1,9 @@
+[uwsgi]
+master = True
+socket = {{ transplant.uwsgi_host }}:{{ transplant.uwsgi_port }}
+workers = {{ [ansible_processor_cores, 4] | max }}
+chdir = {{ transplant.dir }}/app
+wsgi-file = transplant.py
+callable = app
+die-on-term = True
+reload-mercy = 3600

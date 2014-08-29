@@ -1,0 +1,14 @@
+transplant:
+  user: transplant
+  group: transplant
+  dir: /opt/transplant
+  data_dir: /var/lib/transplant
+  repository: git@github.com:laggyluke/transplant.git
+  version: master
+  http_port: 80
+  http_username: ~
+  http_password: ~
+  uwsgi_host: 127.0.0.1
+  uwsgi_port: 3031
+  config:
+    repositories: []
