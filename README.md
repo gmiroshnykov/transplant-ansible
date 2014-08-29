@@ -9,7 +9,7 @@ Usage
 Example:
 
     # provision everything
-    ansible-playbook -i testing
+    ./provision.sh -i testing
 
     # provision testing repositories
-    ansible-playbook -i testing testing-repositories.yaml
+    ./provision.sh -i testing testing-repositories.yml
