@@ -9,7 +9,7 @@ Usage
 Example:
 
     # provision everything
-    ./provision.sh -i testing
+    ./provision.sh testing
 
     # provision testing repositories
-    ./provision.sh -i testing testing-repositories.yml
+    ./provision.sh testing testing-repositories.yml

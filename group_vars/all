@@ -16,3 +16,9 @@ users:
     keys:
       - |
         ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEAtCBS945wWvvw0AyU+Gc2hHnbO6yQdmzbgMdUUyXVX2zUHE5MaBtg+zCKQFYeP2Akjiui00KUGczS2ARcCr3mZPpExZedZNbZbI1PkejaI6AoQHi/+fZRi4ovbjecui/zh83zcnjCibCgSxEzBrR+pIXMXAF3Knb7Yw17NorAJ8M=
+
+  - name: dminor
+    groups: [admin]
+    keys:
+      - |
+        ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5zSmyk23QU4rFjKrB2I7V8k1Ke0SiWfv9r/HMH2xftVBOi/pdVsF+qjvTtpvN58Kmj/7SDNjzQNP296ekFqHXikUxmIxV+dRF/44dTLHHhomQuj9XKumdTevkFf3lxbRSFxvR9T1LV0+CNwUl5rSwdHdxsjWt7F11lTuMyD4/UtwvIiWGWnYkM/4CH+Voqy5ZX4KzTf8Hs63wa0RyDHLzo0xBtHL7LNNv47CwWbFVhoRzfkRTECyp2nwKJa20e6D1oFQkZ0nkiaALf7gOCbpkOBTY/Ei00tsXUoF95+Ryh/50SvyRqDNfgLwtZgVI8FO8x5rlkaXrho0F0VJbc2LT

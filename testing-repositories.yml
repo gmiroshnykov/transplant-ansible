@@ -1,4 +1,4 @@
 - hosts: transplant
   roles:
-    - role: testing_repositories
+    - role: testing-repositories
       when: testing_repositories.enabled

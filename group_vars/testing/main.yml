@@ -13,6 +13,8 @@ transplant:
         path: https://hg.mozilla.org/releases/mozilla-esr31/
       - name: mozilla-aurora-test
         path: /var/hg/mozilla-aurora-test
+      - name: mozilla-central-test
+        path: /var/hg/mozilla-central-test
 
 testing_repositories:
   enabled: true
@@ -20,3 +22,6 @@ testing_repositories:
     - name: mozilla-aurora-test
       path: /var/hg/mozilla-aurora-test
       from: https://hg.mozilla.org/releases/mozilla-aurora/
+    - name: mozilla-central-test
+      path: /var/hg/mozilla-central-test
+      from: https://hg.mozilla.org/mozilla-central/
