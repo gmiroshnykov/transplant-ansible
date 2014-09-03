@@ -1,0 +1,9 @@
+- name: add PPA
+  sudo: true
+  apt_repository: >
+    repo='ppa:keithw/mosh'
+    update_cache=true
+
+- name: install package
+  sudo: true
+  apt: pkg=mosh
