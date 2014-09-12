@@ -1,4 +1,9 @@
-- name: create project user and group
+- name: create project group
+  sudo: true
+  user: >
+    name={{ transplant.group }}
+
+- name: create project user
   sudo: true
   user: >
     name={{ transplant.user }}
@@ -35,6 +40,25 @@
     version={{ transplant.version }}
     dest={{ transplant.dir }}/app
   notify: restart transplant
+  register: clone
+
+- name: npm install
+  command: >
+    npm install
+    chdir={{ transplant.dir }}/app
+  when: clone | changed
+
+- name: npm run bower-install
+  command: >
+    npm run bower-install
+    chdir={{ transplant.dir }}/app
+  when: clone | changed
+
+- name: npm run gulp-build
+  command: >
+    npm run gulp-build
+    chdir={{ transplant.dir }}/app
+  when: clone | changed
 
 - name: pip install
   pip: >

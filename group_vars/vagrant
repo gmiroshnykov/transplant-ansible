@@ -2,6 +2,6 @@ transplant:
   config:
     repositories:
       - name: transplant-src
-        path: ssh://hg@bitbucket.org/laggyluke/transplant-src
+        path: https://bitbucket.org/laggyluke/transplant-src
       - name: transplant-dst
-        path: ssh://hg@bitbucket.org/laggyluke/transplant-dst
+        path: https://bitbucket.org/laggyluke/transplant-dst

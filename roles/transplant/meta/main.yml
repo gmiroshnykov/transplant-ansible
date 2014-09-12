@@ -1,4 +1,5 @@
 dependencies:
   - laggyluke.nginx
+  - laggyluke.nodejs
   - laggyluke.git
   - laggyluke.mercurial

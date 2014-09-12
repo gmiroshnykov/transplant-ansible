@@ -1,7 +1,7 @@
 [uwsgi]
 master = True
 socket = {{ transplant.uwsgi_host }}:{{ transplant.uwsgi_port }}
-workers = {{ [ansible_processor_cores, 4] | max }}
+workers = 4
 chdir = {{ transplant.dir }}/app
 wsgi-file = transplant.py
 callable = app
