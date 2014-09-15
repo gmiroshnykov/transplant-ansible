@@ -69,7 +69,7 @@
 - name: generate config.py
   template: >
     src=config.py.j2
-    dest={{ transplant.dir }}/app/config.py
+    dest={{ transplant.dir }}/app/server/config.py
     mode=0644
   notify: restart transplant
 

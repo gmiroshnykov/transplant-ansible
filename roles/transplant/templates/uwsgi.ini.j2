@@ -2,7 +2,7 @@
 master = True
 socket = {{ transplant.uwsgi_host }}:{{ transplant.uwsgi_port }}
 workers = 4
-chdir = {{ transplant.dir }}/app
+chdir = {{ transplant.dir }}/app/server
 wsgi-file = transplant.py
 callable = app
 die-on-term = True
