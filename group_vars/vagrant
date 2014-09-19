@@ -5,3 +5,4 @@ transplant:
         path: https://bitbucket.org/laggyluke/transplant-src
       - name: transplant-dst
         path: https://bitbucket.org/laggyluke/transplant-dst
+        base: https://bitbucket.org/laggyluke/transplant-src
