@@ -48,18 +48,6 @@
     chdir={{ transplant.dir }}/app
   when: clone | changed
 
-- name: npm run bower-install
-  command: >
-    npm run bower-install
-    chdir={{ transplant.dir }}/app
-  when: clone | changed
-
-- name: npm run gulp-build
-  command: >
-    npm run gulp-build
-    chdir={{ transplant.dir }}/app
-  when: clone | changed
-
 - name: pip install
   pip: >
     requirements={{ transplant.dir }}/app/requirements.txt
