@@ -1,6 +1,9 @@
 transplant:
   config:
     repositories:
+      - name: try
+        path: https://hg.mozilla.org/try/
+        base: https://hg.mozilla.org/mozilla-central/
       - name: mozilla-central
         path: https://hg.mozilla.org/mozilla-central/
       - name: mozilla-aurora
