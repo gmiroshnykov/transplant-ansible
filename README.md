@@ -1,6 +1,17 @@
 Ansible scripts for Transplant Tool
 ===================================
 
+
+Setup
+-----
+
+Add the following lines to your `~/.ssh/config`:
+
+	Host transplant.infinity.com.ua
+	    User ubuntu
+	    ForwardAgent yes
+
+
 Usage
 -----
 
